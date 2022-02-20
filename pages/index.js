@@ -18,8 +18,8 @@ import SubgraphLoader from "../components/subgraphLoader";
 export default function Home(props) {
   /* post are fetched server side and passed in as props */
   /* see getServerSideProps */
-  const { posts } = props;
-  console.log('this is posts on idnex', props.posts);
+  // const { posts } = props;
+  // console.log('this is posts on idnex', props.posts);
   const account = useContext(AccountContext)
 
   const router = useRouter()
@@ -83,13 +83,13 @@ export async function getServerSideProps() {
     provider = new ethers.providers.JsonRpcProvider('https://polygon-rpc.com/')
   }
 
-  const contract = new ethers.Contract(contractAddress, Blog.abi, provider)
-  const data = await contract.fetchPosts()
-  return {
-    props: {
-      posts: JSON.parse(JSON.stringify(data))
-    }
-  }
+  // const contract = new ethers.Contract(contractAddress, Blog.abi, provider)
+  // const data = await contract.fetchPosts()
+  // return {
+  //   props: {
+  //     posts: JSON.parse(JSON.stringify(data))
+  //   }
+  // }
 }
 
 const arrowContainer = css`
