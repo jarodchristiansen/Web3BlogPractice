@@ -69,11 +69,11 @@ export async function getStaticPaths() {
     } else if (process.env.ENVIRONMENT === 'testnet') {
         provider = new ethers.providers.JsonRpcProvider('https://rpc-mumbai.matic.today')
     } else {
-        provider = new ethers.providers.JsonRpcProvider('https://polygon-rpc.com/')
+        provider = new ethers.providers.JsonRpcProvider('https://rpc-mumbai.matic.today')
     }
 
     const contract = new ethers.Contract(contractAddress, Blog.abi, provider)
-    // const data = await contract.fetchPosts()
+    const data = await contract.fetchPosts()
 
     /* then we map over the post and create a params object passing */
     /* the id property to getStaticProps which will run for ever post */

@@ -38,7 +38,7 @@ export default function Post() {
         } else if (process.env.NEXT_PUBLIC_ENVIRONMENT === 'testnet') {
             provider = new ethers.providers.JsonRpcProvider('https://rpc-mumbai.matic.today')
         } else {
-            provider = new ethers.providers.JsonRpcProvider('https://polygon-rpc.com/')
+            provider = new ethers.providers.JsonRpcProvider('https://rpc-mumbai.matic.today')
         }
         const contract = new ethers.Contract(contractAddress, Blog.abi, provider)
         const val = await contract.fetchPost(id)
