@@ -11,10 +11,10 @@ function SubgraphLoader() {
   const [noResultsFound, setNoResultsFound] = useState(false);
 
     useEffect(() => {
-    getSubgraphData().then(data => {
-            console.log(data.data.posts);
-            setResult(data.data.posts);
-        });
+    // getSubgraphData().then(data => {
+    //         console.log(data.data.posts);
+    //         setResult(data.data.posts);
+    //     });
     //
     //     getPostByName().then(data => {
     //         console.log(data.data.postSearch);
