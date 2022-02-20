@@ -59,8 +59,8 @@ function MyApp({ Component, pageProps }) {
             <Link href="/">
               <a>
                 <div className={titleContainer}>
-                  <h2 className={title}>Full Stack</h2>
-                  <p className={description}>WEB3</p>
+                  <h2 className={title}>DEGEN</h2>
+                  <p className={description}>JOURNAL</p>
                 </div>
               </a>
             </Link>
