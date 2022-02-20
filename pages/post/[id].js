@@ -73,7 +73,7 @@ export async function getStaticPaths() {
     }
 
     const contract = new ethers.Contract(contractAddress, Blog.abi, provider)
-    const data = await contract.fetchPosts()
+    // const data = await contract.fetchPosts()
 
     /* then we map over the post and create a params object passing */
     /* the id property to getStaticProps which will run for ever post */
